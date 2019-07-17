@@ -1,6 +1,5 @@
 package grid.objects;
 
-import cell.objects.Cell;
 import grid.interfaces.IPoint;
 
 public class Point implements IPoint {
@@ -8,7 +7,7 @@ public class Point implements IPoint {
     private int row;
     private int column;
 
-    public Point(int index){
+    Point(int index){
         row = rowFromIndex(index);
         column = colFromIndex(index);
     }

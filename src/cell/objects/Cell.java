@@ -1,23 +1,22 @@
 package cell.objects;
 
 import cell.interfaces.ICell;
+import grid.interfaces.IPoint;
 import grid.objects.Point;
 
 public class Cell implements ICell {
     private int number;
     private int rightNumber;
-    private Point point;
+    private IPoint point;
 
     public Cell(){
         number = 0;
         rightNumber = 0;
-        point = null;
     }
 
     public Cell(int num){
         this.setNumber(num);
         this.setRightNumber(num);
-        point = null;
     }
 
     @Override
@@ -28,7 +27,6 @@ public class Cell implements ICell {
     @Override
     public void setNumber(Integer number) {
         this.number = checkInput(number);
-//        point.setConstraint(this);
     }
 
     @Override
@@ -42,13 +40,13 @@ public class Cell implements ICell {
     }
 
     @Override
-    public Point getPoint() {
+    public IPoint getPoint() {
         return point;
     }
 
     @Override
-    public void setPoint(Integer index) {
-        point = new Point(index);
+    public void setPoint(IPoint point) {
+        this.point = point;
     }
 
     @Override

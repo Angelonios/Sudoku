@@ -10,7 +10,7 @@ import java.util.List;
 
 public class GridBuilder implements IGridBuilder {
 
-    List<ICell> cellsList;
+    private List<ICell> cellsList;
 
     @Override
     public IGrid buildGrid() {
@@ -22,8 +22,7 @@ public class GridBuilder implements IGridBuilder {
     @Override
     public IGrid parseGrid(String stringGrid) {
         init();
-        checkInput(stringGrid);
-        parseCells(stringGrid);
+        parseCells(checkInput(stringGrid));
         return terminate();
     }
 
@@ -53,21 +52,23 @@ public class GridBuilder implements IGridBuilder {
         return result;
     }
 
-    private void checkInput(String input){
+    private String checkInput(String input){
         if(input.length() != 81){
             System.out.println("Error while parsing exported grid - lenght of String is not equal to 81");
-            return;
+            return null;
+        } else{
+            return input;
         }
     }
 
     private void parseCells(String input){
-        Arrays.stream(input.split("(?!^)")).forEach(digit -> parseCell(digit));
+        Arrays.stream(input.split("(?!^)")).forEach(this::parseCell);
     }
 
 
     private void setCellPoint(){
         ICell cell = getLastCell();
-        cell.setPoint(cellsList.indexOf(cell));
+        cell.setPoint(new Point(cellsList.indexOf(cell)));
     }
 
     private ICell getLastCell(){

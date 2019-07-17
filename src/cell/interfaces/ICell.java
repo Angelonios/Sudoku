@@ -7,47 +7,47 @@ public interface ICell {
      *
      * @return
      */
-    public Integer getNumber();
+    Integer getNumber();
 
     /**
      *
      */
-    public void setNumber(Integer number);
+    void setNumber(Integer number);
 
     /**
      *
      * @return
      */
-    public Integer getRightNumber();
+    Integer getRightNumber();
 
     /**
      *
      * @param number
      */
-    public void setRightNumber(Integer number);
+    void setRightNumber(Integer number);
 
     /**
      *
      * @return
      */
-    public IPoint getPoint();
+    IPoint getPoint();
 
     /**
      *
-     * @param index
+     * @param point
      */
-    public void setPoint(Integer index);
-
-    /**
-     *
-     * @return
-     */
-    public boolean isCorrect();
+    void setPoint(IPoint point);
 
     /**
      *
      * @return
      */
-    public boolean isBlank();
+    boolean isCorrect();
+
+    /**
+     *
+     * @return
+     */
+    boolean isBlank();
 
 }

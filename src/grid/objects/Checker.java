@@ -17,7 +17,7 @@ public class Checker implements IChecker {
     @Override
     public boolean validate(IGrid grid) {
         updateGrid(grid);
-        return currentGrid.getCells().stream().allMatch(cell -> validateCell(cell));
+        return currentGrid.getCells().stream().allMatch(this::validateCell);
     }
 
     private boolean validateCell(ICell cell){
@@ -58,7 +58,7 @@ public class Checker implements IChecker {
      */
     private List<ICell> getCellsFromRow(IPoint point){
         return currentGrid.getCells().stream()
-                                     .filter(cell -> cell.getPoint().getRow() == point.getRow())
+                                     .filter(cell -> cell.getPoint().getRow().equals(point.getRow()))
                                      .collect(Collectors.toList());
     }
 
@@ -81,7 +81,7 @@ public class Checker implements IChecker {
      */
     private List<ICell> getCellsFromCol(IPoint point){
         return currentGrid.getCells().stream()
-                                     .filter(cell -> cell.getPoint().getCol() == point.getCol())
+                                     .filter(cell -> cell.getPoint().getCol().equals(point.getCol()))
                                      .collect(Collectors.toList());
     }
 
@@ -129,6 +129,5 @@ public class Checker implements IChecker {
 //    private Point findSqrCorner(Point point){
 //        return new Point((point.getIndex()/27)*27 + ((point.getIndex()%9)%3)*3 );
 //    }
-
 }
 

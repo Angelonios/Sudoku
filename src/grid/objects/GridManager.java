@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class GridManager implements IGridManager {
 
-    protected IGrid currentGrid;
+    private IGrid currentGrid;
     private final IGridBuilder gridBuilder = new GridBuilder();
     private final IChecker checker = new Checker();
     private final ISolver solver = new Solver(checker);

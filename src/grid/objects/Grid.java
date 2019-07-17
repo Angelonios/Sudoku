@@ -13,12 +13,7 @@ public class Grid implements IGrid {
     private List<ICell> cells;
     private ICell currentCell;
 
-    public Grid(){
-        cells = null;
-        currentCell = null;
-    }
-
-    public Grid(List<ICell> list){
+    Grid(List<ICell> list){
         cells = list;
         currentCell = null;
     }
