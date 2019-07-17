@@ -1,7 +1,6 @@
 package grid.objects;
 
 import cell.interfaces.ICell;
-import cell.objects.Cell;
 import grid.interfaces.IChecker;
 import grid.interfaces.IGrid;
 import grid.interfaces.IPoint;
@@ -17,10 +16,8 @@ public class Solver implements ISolver {
     private ICell currentCell;
     private IChecker checker;
 
-    public Solver(IChecker checker){
+    Solver(IChecker checker){
         this.checker = checker;
-        currentGrid = null;
-        currentCell = new Cell();
     }
 
     @Override
