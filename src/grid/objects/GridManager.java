@@ -2,7 +2,6 @@ package grid.objects;
 
 import grid.interfaces.*;
 
-import java.util.stream.Collectors;
 
 public class GridManager implements IGridManager {
 
@@ -23,14 +22,10 @@ public class GridManager implements IGridManager {
     }
 
     @Override
-    public void createSudoku() {
-//        String exportedSudoku = "152489376739256841468371295387124659591763428246895713914637582625948137873512964";
+    public void makeSudoku() {
         currentGrid = gridBuilder.buildGrid();
-        currentGrid.printGrid();
         solver.solve(currentGrid);
-        currentGrid.printGrid();
         puzzleGenerator.generateSudoku(currentGrid);
-        currentGrid.printGrid();
     }
 
 

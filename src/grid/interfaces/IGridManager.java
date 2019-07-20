@@ -28,5 +28,5 @@ public interface IGridManager {
      * some cells don't have a number (which is shown in the grid). Thus this method uses methods from other classes.
      * The classes being used are: GridBuilder, Solver & Checker, Riddler.
      */
-    public void createSudoku();
+    public void makeSudoku();
 }
