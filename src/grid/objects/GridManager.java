@@ -28,6 +28,11 @@ public class GridManager implements IGridManager {
         puzzleGenerator.generateSudoku(currentGrid);
     }
 
+    @Override
+    public double getProgress() {
+        return currentGrid.streamCells().filter(cell -> cell.getNumber() == cell.getRightNumber()).count() / 81;
+    }
+
 
 }
 
