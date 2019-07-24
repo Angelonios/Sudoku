@@ -29,12 +29,4 @@ public interface IGridManager {
      * The classes being used are: GridBuilder, Solver & Checker, Riddler.
      */
     public void makeSudoku();
-
-    /**
-     * This method returns a double value which represents the portion of cells which have implicit value 0.
-     * In other words this method returns a value which represents how much is sudoku filled.
-     * During the game, user might make mistakes (put wrong number into given cell)... such mistakes won't
-     * make this value bigger (meaning, that it checks real progress).
-     */
-    public double getProgress();
 }
