@@ -1,8 +1,7 @@
 package grid.interfaces;
 
 import cell.interfaces.ICell;
-import cell.objects.Cell;
-import grid.objects.Point;
+
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -19,28 +18,6 @@ public interface IGrid {
      * @param cell to be set as current cell.
      */
     public void setCurrentCell(ICell cell);
-
-    /**
-     * Returns a point instance representing position of cell in grid.
-     * @return point instance of cell in a grid
-     */
-    public IPoint getCurrentCellPoint();
-
-    /**
-     * This method retrieves a cell from a list as if it was in a grid.
-     * Thus the interval of allowed numbers to input both for row and col is from 0 - 8.
-     * @param row can be from interval 0 - 8.
-     * @param col can be from interval 0 - 8.
-     * @return cell.
-     */
-    public ICell getCellAt(Integer row, Integer col);
-
-    /**
-     * This method retrieves a cell from a list as if it was in a grid.
-     * @param index - carries the row and column numbers of cell.
-     * @return cell.
-     */
-    public ICell getCellAt(Integer index);
 
     /**
      * This method returns all cells from a grid.

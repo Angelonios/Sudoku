@@ -2,7 +2,6 @@ package grid.objects;
 
 import cell.interfaces.ICell;
 import grid.interfaces.IGrid;
-import grid.interfaces.IPoint;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -26,24 +25,6 @@ public class Grid implements IGrid {
     @Override
     public void setCurrentCell(ICell cell) {
         currentCell = cell;
-    }
-
-    @Override
-    public IPoint getCurrentCellPoint() {
-        return currentCell.getPoint();
-    }
-
-    @Override
-    public ICell getCellAt(Integer row, Integer col) {
-        return cells.get(row*9 + col);
-    }
-
-    @Override
-    public ICell getCellAt(Integer index) {
-        if(index > 80){
-            return null;
-        }
-        return cells.get(index);
     }
 
     @Override

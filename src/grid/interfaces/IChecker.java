@@ -1,6 +1,5 @@
 package grid.interfaces;
 
-import grid.objects.Grid;
 import grid.objects.Point;
 
 public interface IChecker {
@@ -21,12 +20,5 @@ public interface IChecker {
      * @param num number to be added.
      * @return true/false ~ OK/not good.
      */
-    public boolean checkNum(IGrid grid, IPoint point, int num);
-
-    /**
-     * Since object checker works with solver to fill the Sudoku with an unique solution
-     * and also solver changes the grid frequently, the checker needs updates of the grid.
-     * @param grid
-     */
-    public void updateGrid(IGrid grid);
+    public boolean checkNum(IGrid grid, Point point, int num);
 }

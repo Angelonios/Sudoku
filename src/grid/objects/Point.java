@@ -1,8 +1,6 @@
 package grid.objects;
 
-import grid.interfaces.IPoint;
-
-public class Point implements IPoint {
+public class Point{
 
     private int row;
     private int column;
@@ -12,36 +10,27 @@ public class Point implements IPoint {
         column = colFromIndex(index);
     }
 
-    @Override
     public Integer getRow() {
         return row;
     }
 
-    @Override
-    public void setRow(Integer r) {
-        row = r;
-    }
-
-    @Override
     public Integer getCol() {
         return column;
     }
 
-    @Override
-    public void setCol(Integer c) {
-        column = c;
-    }
-
-    @Override
     public Integer getIndex() {
-        return (row*DIMENSION + column);
+        return getIndex(row, column);
     }
 
-    private Integer rowFromIndex(Integer index) {
-        return (index/9);
+    public static Integer getIndex(int row, int column){
+        return (row*9 + column);
     }
 
-    private Integer colFromIndex(Integer index){
-        return (index%9);
+    public static Integer rowFromIndex(int index){
+        return index/9;
+    }
+
+    public static Integer colFromIndex(int index){
+        return index%9;
     }
 }

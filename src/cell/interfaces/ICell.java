@@ -1,6 +1,6 @@
 package cell.interfaces;
 
-import grid.interfaces.IPoint;
+import grid.objects.Point;
 
 public interface ICell {
     /**
@@ -30,13 +30,13 @@ public interface ICell {
      *
      * @return
      */
-    IPoint getPoint();
+    Point getPoint();
 
     /**
      *
      * @param point
      */
-    void setPoint(IPoint point);
+    void setPoint(Point point);
 
     /**
      *

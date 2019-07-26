@@ -1,7 +1,5 @@
 package grid.interfaces;
 
-import grid.objects.Grid;
-
 public interface IGridBuilder {
 
     /**

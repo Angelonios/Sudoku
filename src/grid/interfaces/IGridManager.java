@@ -1,7 +1,5 @@
 package grid.interfaces;
 
-import grid.objects.Grid;
-
 /**
  * This class offers management interface for grid. It used by game class (IGame interface) to create sudoku instances
  * and load them into the graphical user interface, or other (that is why this interface has these methods: export,

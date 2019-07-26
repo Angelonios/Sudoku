@@ -3,49 +3,48 @@ package grid.objects;
 import cell.interfaces.ICell;
 import grid.interfaces.IChecker;
 import grid.interfaces.IGrid;
-import grid.interfaces.IPoint;
-import grid.interfaces.ISolver;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Solver implements ISolver {
+public class Solver {
 
     private IGrid currentGrid;
     private ICell currentCell;
     private IChecker checker;
+    private Search search;
 
-    Solver(IChecker checker){
+    Solver(IChecker checker, Search search){
         this.checker = checker;
+        this.search = search;
     }
 
-    @Override
     public void solve(IGrid grid) {
         setUp(grid);
-        backtrackBruteForce(currentCell.getPoint());
+        backtrackBruteForce(currentCell);
     }
 
     private void setUp(IGrid grid){
         currentGrid = grid;
-        checker.updateGrid(grid);
-        currentCell = currentGrid.getCellAt(0, 0);
+        search.getReference(grid);
+        currentCell = Search.getCellAt(0);
     }
 
-    private boolean backtrackBruteForce(IPoint point){
-        if(currentGrid.getCellAt(point.getIndex()).getNumber() != 0){
+    private boolean backtrackBruteForce(ICell cell){
+        if(cell.getNumber() != 0){
             return pickNext();
         }
         for(Integer number : initList()){
-            if(checkNumber(point, number)){
-                setNumber(point, number);
+            if(checkNumber(cell, number)){
+                setNumber(cell, number);
                 if(pickNext()){
                     return true;
                 }
-                selectCurrentCell(point);
+                currentCell = cell;
             }
         }
-        resetCurrentCell(point);
+        resetCurrentCell(cell);
         return false;
     }
 
@@ -53,15 +52,11 @@ public class Solver implements ISolver {
         if(currentCell == null){
             return true;
         }
-        currentCell = nextCell();
+        currentCell = Search.nextCell(currentCell);
         if(currentCell == null){
             return true;
         }
-        return backtrackBruteForce(currentCell.getPoint());
-    }
-
-    private ICell nextCell(){
-        return currentGrid.getCellAt(currentCell.getPoint().getIndex() + 1);
+        return backtrackBruteForce(currentCell);
     }
 
     private List<Integer> initList(){
@@ -73,22 +68,16 @@ public class Solver implements ISolver {
         return result;
     }
 
-    private void setNumber(IPoint point, int number){
-        ICell cell = currentGrid.getCellAt(point.getIndex());
+    private void setNumber(ICell cell, int number){
         cell.setNumber(number);
         cell.setRightNumber(number);
     }
 
-    private boolean checkNumber(IPoint point, int number){
-        return checker.checkNum(currentGrid, point, number);
+    private boolean checkNumber(ICell cell, int number){
+        return checker.checkNum(currentGrid, cell.getPoint(), number);
     }
 
-    private void selectCurrentCell(IPoint point){
-        currentCell = currentGrid.getCellAt(point.getIndex());
-    }
-
-    private void resetCurrentCell(IPoint point){
-        ICell cell = currentGrid.getCellAt(point.getIndex());
+    private void resetCurrentCell(ICell cell){
         cell.setNumber(0);
         cell.setRightNumber(0);
     }

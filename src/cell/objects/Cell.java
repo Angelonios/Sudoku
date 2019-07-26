@@ -1,13 +1,12 @@
 package cell.objects;
 
 import cell.interfaces.ICell;
-import grid.interfaces.IPoint;
 import grid.objects.Point;
 
 public class Cell implements ICell {
     private int number;
     private int rightNumber;
-    private IPoint point;
+    private Point point;
 
     public Cell(){
         number = 0;
@@ -40,12 +39,12 @@ public class Cell implements ICell {
     }
 
     @Override
-    public IPoint getPoint() {
+    public Point getPoint() {
         return point;
     }
 
     @Override
-    public void setPoint(IPoint point) {
+    public void setPoint(Point point) {
         this.point = point;
     }
 

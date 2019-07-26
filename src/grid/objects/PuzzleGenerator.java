@@ -1,9 +1,7 @@
 package grid.objects;
 
 import cell.interfaces.ICell;
-import cell.objects.Cell;
 import grid.interfaces.IGrid;
-import grid.interfaces.IPoint;
 import grid.interfaces.IPuzzleGenerator;
 
 import java.util.ArrayList;
@@ -32,7 +30,7 @@ public class PuzzleGenerator implements IPuzzleGenerator {
 
     private void removeNumbers(List<ICell> cells) {
         Collections.shuffle(cells);
-        List<IPoint> pointList = cells.subList(0, cells.size()/2).stream().map(ICell::getPoint).collect(Collectors.toList());
+        List<Point> pointList = cells.subList(0, cells.size()/2).stream().map(ICell::getPoint).collect(Collectors.toList());
         currentGrid.streamCells().forEach(cell -> {
             if(pointList.stream().anyMatch(point -> point.getIndex().equals(cell.getPoint().getIndex()))){
                 cell.setNumber(0);
