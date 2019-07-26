@@ -8,18 +8,6 @@ import java.util.stream.Stream;
 public interface IGrid {
 
     /**
-     * Returns current cell.
-     * @return current cell.
-     */
-    public ICell getCurrentCell();
-
-    /**
-     * Sets a new cell as current cell.
-     * @param cell to be set as current cell.
-     */
-    public void setCurrentCell(ICell cell);
-
-    /**
      * This method returns all cells from a grid.
      * @return list of cells.
      */

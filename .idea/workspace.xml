@@ -6,28 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added class Search containing all grid traversing methods, which are made static.&#10;+ refactored the code using the new class.">
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grid/objects/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sudoku/cell/objects/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sudoku/cell/objects/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sudoku/grid/objects/GridManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sudoku/grid/objects/GridManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sudoku/grid/objects/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sudoku/grid/objects/Solver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cell/interfaces/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cell/interfaces/ICell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cell/objects/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cell/objects/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/interfaces/IChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/interfaces/IChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grid/interfaces/IGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/interfaces/IGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/interfaces/IGridBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/interfaces/IGridBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/interfaces/IGridManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/interfaces/IGridManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/interfaces/IPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/interfaces/IPuzzleGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/interfaces/IPuzzleGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/interfaces/ISolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/objects/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/objects/Checker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grid/objects/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/objects/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/objects/GridManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/objects/GridManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grid/objects/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/objects/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/objects/PuzzleGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/objects/PuzzleGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid/objects/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/objects/Solver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grid/objects/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/objects/Search.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,9 +68,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="846">
+              <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grid/objects/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
+            <state relative-caret-position="544">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,57 +94,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/grid/objects/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#184#185#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/grid/objects/Search.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+            <state relative-caret-position="-308">
+              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#359#360#0" expanded="true" />
-                <element signature="e#418#419#0" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
-                <element signature="e#564#565#0" expanded="true" />
-                <element signature="e#3151#3152#0" expanded="true" />
-                <element signature="e#3194#3195#0" expanded="true" />
-                <element signature="e#3241#3242#0" expanded="true" />
-                <element signature="e#3284#3285#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/grid/interfaces/IPuzzleGenerator.java">
+        <entry file="file://$PROJECT_DIR$/src/grid/objects/GridBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-682">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1784#1785#0" expanded="true" />
+                <element signature="e#1832#1833#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/grid/objects/Search.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1445">
+              <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cell/interfaces/ICell.java">
+        <entry file="file://$PROJECT_DIR$/src/grid/interfaces/IGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="-119">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,11 +150,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grid/objects/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="440">
+              <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#432#433#0" expanded="true" />
                 <element signature="e#476#477#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grid/objects/PuzzleGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,7 +177,7 @@
         <entry file="file://$PROJECT_DIR$/src/grid/objects/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,25 +186,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cell/objects/Cell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#817#818#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/grid/objects/GridManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+            <state relative-caret-position="253">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -273,17 +261,17 @@
         <option value="$PROJECT_DIR$/src/grid/interfaces/IGridTraverser.java" />
         <option value="$PROJECT_DIR$/src/cell/objects/Cell.java" />
         <option value="$PROJECT_DIR$/src/grid/interfaces/IChecker.java" />
-        <option value="$PROJECT_DIR$/src/grid/objects/Grid.java" />
         <option value="$PROJECT_DIR$/src/grid/objects/GridTraverser.java" />
-        <option value="$PROJECT_DIR$/src/grid/interfaces/IGrid.java" />
         <option value="$PROJECT_DIR$/src/grid/objects/SearchPoints.java" />
         <option value="$PROJECT_DIR$/src/grid/objects/PuzzleGenerator.java" />
         <option value="$PROJECT_DIR$/src/grid/objects/Checker.java" />
-        <option value="$PROJECT_DIR$/src/grid/objects/Search.java" />
         <option value="$PROJECT_DIR$/src/grid/interfaces/IPuzzleGenerator.java" />
-        <option value="$PROJECT_DIR$/src/grid/objects/Point.java" />
         <option value="$PROJECT_DIR$/src/grid/objects/Solver.java" />
         <option value="$PROJECT_DIR$/src/grid/objects/GridManager.java" />
+        <option value="$PROJECT_DIR$/src/grid/interfaces/IGrid.java" />
+        <option value="$PROJECT_DIR$/src/grid/objects/Grid.java" />
+        <option value="$PROJECT_DIR$/src/grid/objects/Point.java" />
+        <option value="$PROJECT_DIR$/src/grid/objects/Search.java" />
       </list>
     </option>
   </component>
@@ -362,13 +350,6 @@
               <item name="Sudoku" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="grid" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="interfaces" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Sudoku" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Sudoku" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="grid" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="objects" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -408,7 +389,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564147458355" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564147592298" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
@@ -573,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563971469620</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added class Search containing all grid traversing methods, which are made static.&#10;+ refactored the code using the new class.">
+      <created>1564147483456</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564147483456</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -601,7 +589,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3565341" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5113636" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.234375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4090909" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -812,16 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grid/interfaces/IChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -839,56 +817,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grid/interfaces/IGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grid/interfaces/IGridTraverser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grid/objects/Grid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grid/objects/GridBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1784#1785#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grid/objects/PuzzleGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -905,18 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grid/objects/Checker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cell/objects/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -926,30 +846,6 @@
             <element signature="e#438#439#0" expanded="true" />
             <element signature="e#789#790#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grid/objects/Search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#3151#3152#0" expanded="true" />
-            <element signature="e#3194#3195#0" expanded="true" />
-            <element signature="e#3241#3242#0" expanded="true" />
-            <element signature="e#3284#3285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -978,17 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grid/objects/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding>
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grid/interfaces/ISolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -999,17 +884,107 @@
     <entry file="file://$PROJECT_DIR$/src/grid/objects/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid/objects/Checker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid/interfaces/IGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid/objects/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid/objects/GridBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-682">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+            <element signature="e#1832#1833#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/grid/objects/GridManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="253">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid/objects/PuzzleGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid/objects/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid/objects/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

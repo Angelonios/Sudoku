@@ -10,21 +10,9 @@ import java.util.stream.Stream;
 public class Grid implements IGrid {
 
     private List<ICell> cells;
-    private ICell currentCell;
 
     Grid(List<ICell> list){
         cells = list;
-        currentCell = null;
-    }
-
-    @Override
-    public ICell getCurrentCell() {
-        return currentCell;
-    }
-
-    @Override
-    public void setCurrentCell(ICell cell) {
-        currentCell = cell;
     }
 
     @Override

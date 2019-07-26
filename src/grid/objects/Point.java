@@ -1,5 +1,10 @@
 package grid.objects;
 
+import cell.interfaces.ICell;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Point{
 
     private int row;
@@ -32,5 +37,9 @@ public class Point{
 
     public static Integer colFromIndex(int index){
         return index%9;
+    }
+
+    public static List<Point> getPoints(List<ICell> cells){
+        return cells.stream().map(cell -> cell.getPoint()).collect(Collectors.toList());
     }
 }

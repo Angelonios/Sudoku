@@ -27,14 +27,6 @@ public class Search {
         return grid.getCells().get(point.getIndex());
     }
 
-    public static Point getPoint(int index) {
-        return grid.getCells().get(index).getPoint();
-    }
-
-    public static List<Point> getPoints(List<ICell> cells){
-        return cells.stream().map(cell -> cell.getPoint()).collect(Collectors.toList());
-    }
-
     public static List<ICell> getCellsFromRow(int index){
         return grid.streamCells()
                    .filter(c -> c.getPoint().getRow() == Point.rowFromIndex(index))
@@ -97,8 +89,7 @@ public class Search {
         }
         return result;
     }
-
-
+    
     public static List<ICell> getCellsWithNumber(int number) {
         return grid.streamCells()
                 .filter(cell -> cell.getNumber() == number)
